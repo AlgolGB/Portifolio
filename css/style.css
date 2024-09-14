@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body{
+    background-image: linear-gradient(to right bottom, #757575, #7C7C7C, #838383, #929292, #A9A9A9, #DBDBDB);
+    width: 100vw;
+    height: 100vh;
+}
+h1{
+    color: #fff;
+    font-size: 4.2vw;
+    text-decoration: none;
+    letter-spacing: 0.4rem;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+.boxes, .img-fluid {
+    float: left;
+    width: 8vw;
+    height: 16.5vh;
+    margin-right: 1.6rem;
+    margin-bottom: 1.6rem;
+    border-radius: 0.875rem;
+}
+.boxes{
+    box-shadow: 0 3px 3px 0 #7C7C7C;
+}
+.pagina{
+    background-color: #767676;
+    height: 76.2vh;
+    width: 57.1vw;
+    border-radius: 0.938rem;
+    box-shadow: 0 3px 3px 0 #7C7C7C;
+}
+.guia-selecionada{
+    color: #fff;
+    background-color: #666666;
+    border-style: none;
+    width: 9.7vw;
+    height: 2.5rem;
+    border-top-left-radius: 0.938rem;
+    border-top-right-radius: 0.938rem;
+}
+.guia-desselecionada{
+    color: #fff;
+    background-color: #666666;
+    border-style: none;
+    width: 9.7vw;
+    height: 1.875rem;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    opacity: 37%;
+    margin-top: 0.625rem;
+}
+.cabecalho{
+    background-color: #666666;
+    height: 4.375rem;
+    width: 57.1vw;
+    padding: 1.25rem 0 0 3.25rem;
+}
+.pesquisa{
+    background-color: #585858;
+    width: 45vw;
+    height: 1.875rem;
+    border-radius: 1.875rem;
+}
+.pagina-img-perfil{
+    margin: 1.25rem 0 0 3.25rem;
+}
+.pagina-links{
+    margin: 1.5rem 0 1.5rem 0;
+}
+.link-redes{
+    margin-right: 6.3vw;
+}
+.img-links{
+    width: 3vw;
+    border-radius: 30px;
+}
+.pagina-conteudo-scroll{
+    height: 45vh;
+    width: 32.55vw;
+    overflow-x: auto;
+    border-radius: 0.625rem;
+}
+.pagina-conteudo-scroll::-webkit-scrollbar{
+    display: none;
+}
+.pagina-conteudo-sobremim{
+    background-color: #A1A1A1;
+    height: 45vh;
+    width: 32.55vw;
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    overflow-y: scroll;
+}
+.pagina-conteudo-sobremim::-webkit-scrollbar {
+    display: none;
+}
+.pagina-conteudo-formacao{
+    background-color: #A1A1A1;
+    width: 32.55vw;
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+p{
+    color: #fff;
+    text-align: justify;
+}
+h5, h4{
+    color: #fff;
+}
+.guia-desselecionada:hover{
+    margin-top: 0.300rem;
+    height: 2.200rem;
+    transition: 0.5s;
+    opacity: 70%;
+    background-color: #666666;
+}
+.img-links:hover{
+    box-shadow: 0 0 0 0;
+}
+@media(max-width: 720px){
+    .pagina-conteudo-scroll{
+        width: 30vw;
+    }
+    .pagina-conteudo-sobremim{
+        width: 25vw;
+        
+    }
+}
