@@ -72,7 +72,7 @@ const formacaoCursos = [
         sintese: "Estruturação de dados de maneira organizada, utilizando listas e coleções, permitindo criar programas mais robustos e flexíveis."
     },
 ]
-const contato = [
+const contatos = [
     {
         contato: "37 9 99685907"
     },

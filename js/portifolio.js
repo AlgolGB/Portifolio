@@ -1,13 +1,13 @@
 const frm = document.querySelector("form");
 const conteudo = document.getElementById("conteudo");
-let estadoGuia
+let estadoGuia;
 
 frm.addEventListener("submit", (e) => {
     e.preventDefault();
-    if(estadoGuia == 2){
+    if(estadoGuia == 2 || estadoGuia == 3){
         apagaConteudo();
     }
-    alteraGuia(estadoGuia = 1)
+    alteraGuia(estadoGuia = 1);
     const dvBox = document.createElement("div");
     dvBox.className = "pagina-conteudo-sobremim";
     dvBox.id = "conteudo2";
@@ -21,31 +21,49 @@ frm.addEventListener("submit", (e) => {
     btSobreMim.disabled = true;
 });
 frm.btFormacao.addEventListener("click", () => {
-    if(estadoGuia == 1){
+    if(estadoGuia == 1 || estadoGuia ==3){
         apagaConteudo();
     }
-    alteraGuia(estadoGuia = 2)
+    alteraGuia(estadoGuia = 2);
     const dvBox = document.createElement("section");
-    dvBox.id = "conteudo2"
-    conteudo.appendChild(dvBox)
-    dvBox.className = "pagina-conteudo-scroll"
+    dvBox.id = "conteudo2";
+    conteudo.appendChild(dvBox);
+    dvBox.className = "pagina-conteudo-scroll";
     formacaoCursos.forEach(cursos => {
         const dvBoxes = document.createElement("div");
         dvBox.appendChild(dvBoxes);
-        dvBoxes.className = "pagina-conteudo-formacao"
+        dvBoxes.className = "pagina-conteudo-formacao";
         const cursoAno = document.createTextNode(`${cursos.nome} - ${cursos.ano}`);
         const cursoInstiuicao = document.createTextNode(cursos.instituicao);
-        const cursoSintese = document.createTextNode(cursos.sintese)
+        const cursoSintese = document.createTextNode(cursos.sintese);
         const h4 = document.createElement("h4");
-        dvBoxes.appendChild(h4)
+        dvBoxes.appendChild(h4);
         h4.appendChild(cursoAno);
         const h5 = document.createElement("h5");
         dvBoxes.appendChild(h5);
         h5.appendChild(cursoInstiuicao);
         const p = document.createElement("p");
         dvBoxes.appendChild(p);
-        p.appendChild(cursoSintese)
+        p.appendChild(cursoSintese);
     });
+});
+
+frm.btContato.addEventListener("click", () => {
+    if(estadoGuia == 1 || estadoGuia == 2){
+        apagaConteudo();
+    };
+    alteraGuia(estadoGuia = 3);
+    const dvBox = document.createElement("div");
+    dvBox.className = "pagina-conteudo-contato"
+    dvBox.id = "conteudo2";
+    conteudo.appendChild(dvBox);
+    contatos.forEach(contato => {
+        const texto = document.createTextNode(contato.contato);
+        const p = document.createElement("p");
+        p.className = "pagina-conteudo-contato-p"
+        p.appendChild(texto);
+        dvBox.appendChild(p);
+    })
 });
 
 function apagaConteudo () {

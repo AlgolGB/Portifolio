@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -16,8 +17,9 @@ h1{
     letter-spacing: 0.4rem;
     text-align: left;
     margin-bottom: 3rem;
+    font-family: "Chivo";
 }
-.boxes, .img-fluid {
+.boxes{
     float: left;
     width: 8vw;
     height: 16.5vh;
@@ -107,12 +109,29 @@ h1{
     padding: 1.5rem;
     margin-bottom: 0.5rem;
 }
+.pagina-conteudo-contato{
+    background-color: #A1A1A1;
+    width: 32.55vw;
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    overflow-y: scroll;
+}
+.pagina-conteudo-contato::-webkit-scrollbar {
+    display: none;
+}
+.pagina-conteudo-contato-p{
+    font-weight: 400;
+    text-align: center;
+}
 p{
     color: #fff;
     text-align: justify;
+    font-family: "Chivo";
+    font-weight: 200;
 }
-h5, h4{
+h5, h4, input{
     color: #fff;
+    font-family: "Chivo";
 }
 .guia-desselecionada:hover{
     margin-top: 0.300rem;
@@ -124,12 +143,65 @@ h5, h4{
 .img-links:hover{
     box-shadow: 0 0 0 0;
 }
-@media(max-width: 720px){
-    .pagina-conteudo-scroll{
-        width: 30vw;
+@media(max-width: 1530px){
+    .pagina-conteudo-sobremim, .pagina-conteudo-scroll, .pagina-conteudo-contato{
+        height: 40vh;
     }
-    .pagina-conteudo-sobremim{
-        width: 25vw;
-        
+    .link-redes{
+        margin-right: 5.5vw;
+    }.boxes{
+        box-shadow: none;
+    }
+}
+@media(max-width: 1100px){
+    .pagina-conteudo-sobremim, .pagina-conteudo-scroll, .pagina-conteudo-contato{
+        height: 30vh;
+    }
+    .link-redes{
+        margin-right: 5.5vw;
+    }
+    body{
+        height: 110vh;
+    }
+    .boxes{
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+@media(max-width: 780px){
+    #ajustes{
+        display: none;
+    }
+    .pagina{
+        margin-bottom: 350px;
+        margin-left: -200px;
+    }
+}
+@media(max-width: 780px){
+    #ajustes{
+        display: none;
+    }
+    .pagina{
+        margin-bottom: 350px;
+        height: 75vh;
+        width: 81vw;
+    }
+    #aumentoTamanho{
+        margin-right: 600px;
+    }
+    .guia-selecionada, .guia-desselecionada{
+        width: 14vw;
+        height: 2.5rem;
+        border-radius: 0.625rem;
+    }
+    #espacamento{
+        margin-right: 7rem;
+    }
+    .pagina-conteudo-sobremim, .pagina-conteudo-scroll, .pagina-conteudo-contato{
+        width: 81vw;
+        height: 60vh;
+    }
+    .pagina-conteudo-formacao{
+        width: 81vw; 
     }
 }
